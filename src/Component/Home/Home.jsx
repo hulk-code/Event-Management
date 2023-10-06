@@ -1,4 +1,5 @@
 import Services from "../Services/Services";
+import Footer from "../Shared/Footer/Footer";
 import Navber from "../Shared/navber/Navber";
 import Slider from "../Slider/Slider";
 import WhoWA from "../whoWeAre/WhoWA";
@@ -12,6 +13,7 @@ const Home = () => {
          <Slider></Slider>
          <WhoWA></WhoWA>
          <Services></Services>
+         <Footer></Footer>
         </div>
     );
 };
