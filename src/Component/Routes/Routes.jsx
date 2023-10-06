@@ -5,6 +5,7 @@ import Home from "../Home/Home";
 import ContactUs from "../ContactUS/ContactUs";
 import OurService from "../OurService/OurService";
 import Login from "../Login/Login";
+import Details from "../seeDetails/Details";
 
   
 
@@ -29,6 +30,11 @@ import Login from "../Login/Login";
             {
               path: "/login",
               element: <Login></Login>,
+            },
+            {
+              path: "/details/:id",
+              element: <Details></Details>,
+               loader: () =>fetch('/data.json')
             },
           ]
       

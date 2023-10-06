@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Wedding Planning",
+    "image": "https://i.ibb.co/269JRtK/card1.jpg",
+    "image1": "https://i.ibb.co/269JRtK/card1.jpg",
+    "image2": "https://i.ibb.co/269JRtK/card1.jpg",
+    "price": "$5,000 - $20,000",
+    "description": "Create your dream wedding with our expert planning services. From venue selection to decor and catering, we handle it all."
+  },
+  {
+    "id": 2,
+    "name": "Birthday Party Planning",
+    "image": "https://i.ibb.co/dtjGkz7/bcard2.jpg",
+    "image1": "https://i.ibb.co/269JRtK/card1.jpg",
+    "image2": "https://i.ibb.co/269JRtK/card1.jpg",
+    "price": "$500 - $2,000",
+    "description": "Celebrate your special day with a memorable birthday party. Our planners will ensure everything runs smoothly."
+  },
+  {
+    "id": 3,
+    "name": "Baby Shower Coordination",
+    "image": "https://i.ibb.co/bs9GDDh/scard5.jpg",
+    "image1": "https://i.ibb.co/269JRtK/card1.jpg",
+    "image2": "https://i.ibb.co/269JRtK/card1.jpg",
+    "price": "$300 - $1,000",
+    "description": "Welcome your new arrival with a beautiful baby shower. We take care of the details so you can focus on the joy."
+  },
+  {
+    "id": 4,
+    "name": "Engagement Party Services",
+    "image": "https://i.ibb.co/vz5D38w/ecard3.jpg",
+    "image1": "https://i.ibb.co/269JRtK/card1.jpg",
+    "image2": "https://i.ibb.co/269JRtK/card1.jpg",
+    "price": "$400 - $1,500",
+    "description": "Celebrate your engagement with style. Our team will make your engagement party unforgettable."
+  },
+  {
+    "id": 5,
+    "name": "Retirement Party Planning",
+    "image": "https://i.ibb.co/C6YsHJ5/rcard4.jpg",
+    "image1": "https://i.ibb.co/269JRtK/card1.jpg",
+    "image2": "https://i.ibb.co/269JRtK/card1.jpg",
+    "price": "$800 - $2,500",
+    "description": "Bid farewell to your career with a fantastic retirement party. Let us handle the details while you relax."
+  },
+  {
+    "id": 6,
+    "name": "Anniversary Celebration",
+    "image": "https://i.ibb.co/VjMKwSd/ancard6.jpg",
+    "image1": "https://i.ibb.co/269JRtK/card1.jpg",
+    "image2": "https://i.ibb.co/269JRtK/card1.jpg",
+    "price": "$600 - $2,000",
+    "description": "Mark your special milestone with an unforgettable anniversary celebration. We make every moment count."
+  }
+  
+]
