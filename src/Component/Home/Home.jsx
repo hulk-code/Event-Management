@@ -1,5 +1,7 @@
+import Services from "../Services/Services";
 import Navber from "../Shared/navber/Navber";
 import Slider from "../Slider/Slider";
+import WhoWA from "../whoWeAre/WhoWA";
 
 
 const Home = () => {
@@ -8,6 +10,8 @@ const Home = () => {
          
          <Navber></Navber>
          <Slider></Slider>
+         <WhoWA></WhoWA>
+         <Services></Services>
         </div>
     );
 };
