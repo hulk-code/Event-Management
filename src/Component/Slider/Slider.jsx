@@ -1,8 +1,16 @@
   import './Slider.css'
+  import { useEffect } from 'react';
+import 'aos/dist/aos.css'; 
+import AOS from 'aos';
 
 const Slider = () => {
+  useEffect(() => {
+    AOS.init({
+        duration: 1000, 
+      });
+  }, []);
     return (
-        <div className="carousel w-full h-[600px]">
+        <div className="carousel w-full h-[600px]"  data-aos="zoom-in-down">
   <div id="slide1" className="carousel-item relative w-full">
   <div className="title">
           <h2 className='font-poppin text-5xl font-extrabold'>WADDING PLANNING</h2>

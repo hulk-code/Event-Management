@@ -2,10 +2,12 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndP
 import { createContext, useEffect, useState } from "react";
 import auth from "../../firebase/firebase.config";
 
- export const AuthContext=createContext(null)
+ export const AuthContext=createContext('')
  
+// eslint-disable-next-line react/prop-types
 const AuthProvider = ({children}) => {
-    const [user ,setUser]=useState(null)
+    const [user ,setUser]=useState('')
+    
          
     const [loading ,setloading]=useState(true)
     const createUser=(email ,password)=>{
@@ -19,7 +21,7 @@ const AuthProvider = ({children}) => {
         setloading(true)
         return signOut(auth)
     }
-    const googleLogin=
+    
   useEffect(() =>{
      const unSubscribe=onAuthStateChanged(auth , currentUser =>{
         setUser(currentUser)

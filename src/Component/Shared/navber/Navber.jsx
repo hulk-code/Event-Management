@@ -5,6 +5,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navber = () => {
   const {user , LogOut}=useContext(AuthContext)
+  console.log(user);
  
     const navLink=<>
       <li> <NavLink to='/'>Home</NavLink></li>
@@ -24,7 +25,7 @@ const Navber = () => {
     }
     return (
       
-        <div className="navbar font-poppin w-3/4 mx-auto">
+        <div className="navbar font-poppin lg:w-3/4 mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -34,7 +35,7 @@ const Navber = () => {
        {navLink}
       </ul>
     </div>
-    <img  className="h-16 hidden lg:block " src="/src/assets/logo2.png" alt="" />
+    <img  className="h-20 hidden lg:block " src="/src/assets/logo2.png" alt="" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 text-lg">
@@ -54,7 +55,7 @@ const Navber = () => {
   </Link>
     }
 
-<Link to='/register'><button className="btn btn-ghost">Register</button></Link>
+    <Link to='/register'></Link>
   </div>
 </div>
     );

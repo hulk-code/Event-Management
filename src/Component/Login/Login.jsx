@@ -1,14 +1,17 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Navber from "../Shared/navber/Navber";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
+import { BiLogoGoogle } from "react-icons/bi";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
     const {logIn }=useContext(AuthContext)
     const provider=new GoogleAuthProvider();
+    const [error,setError] = useState('')
     
     const location=useLocation();
     const nevigate=useNavigate()
@@ -29,6 +32,12 @@ const Login = () => {
     })
     .catch(error =>{
       console.error(error);
+      setError(error.message)  
+      Swal.fire({
+        icon: 'error',
+        title: 'Login Error',
+        text: error.message,
+      }); 
     })
   }
      const handleGoogleLogin =()=>{
@@ -73,9 +82,10 @@ const Login = () => {
           <button className="btn btn-primary">Login</button>
         </div>
       </form>
-        <p className=" m-auto font-medium">have an account?<Link to='/register'>Register</Link></p>
-        <button onClick={handleGoogleLogin} className="btn btn-primary">gogole login</button>
+        <p className=" m-auto font-medium">have an account?<Link to='/register' className="text-lime-700">Register</Link></p>
+        <button onClick={handleGoogleLogin} className="btn "><BiLogoGoogle className="text-2xl"></BiLogoGoogle></button>
     </div>
+      <p className='text-red-500'> {error}</p>
   </div>
 </div>
         </div>
