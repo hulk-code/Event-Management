@@ -1,58 +1,47 @@
 import { useContext } from "react";
-import Navber from "../Shared/navber/Navber";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import auth from "../../firebase/firebase.config";
+import Navber from "../Shared/navber/Navber";
 
 
-const Login = () => {
-    const {logIn }=useContext(AuthContext)
-    const provider=new GoogleAuthProvider();
-    
-    const location=useLocation();
-    const nevigate=useNavigate()
 
-  const handlLogin= e =>{
+
+const Register = () => {
+  const { createUser}=useContext(AuthContext)
+
+  const handleRegister= e =>{
     e.preventDefault();
     console.log(e.currentTarget);
     const form=new FormData(e.currentTarget)
    
     const password=form.get('password')
     const email=form.get('email')
-    console.log(password,email);
-    logIn(email,password)
+   
+    createUser(email,password)
     .then(result =>{
       console.log(result.user);
-      nevigate(location ?.state ?location.state : '/')
-
     })
     .catch(error =>{
       console.error(error);
     })
   }
-     const handleGoogleLogin =()=>{
-              signInWithPopup(auth,provider)
-              .then(result =>{
-                console.log(result.user);
-              })
-              .catch(error =>{
-                console.error(error);
-              })
-     }
-
     return (
         <div>
           <Navber></Navber>
             <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col ">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Login Here!</h1>
+      <h1 className="text-5xl font-bold">Register Here!</h1>
      
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-      <form className="card-body" onSubmit={handlLogin}>
-       
+      <form className="card-body" onSubmit={handleRegister}>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Name</span>
+          </label>
+          <input type="text" name="name" placeholder="email" className="input input-bordered" required />
+        </div>
        
         <div className="form-control">
           <label className="label">
@@ -70,11 +59,10 @@ const Login = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn btn-primary">Register</button>
         </div>
       </form>
-        <p className=" m-auto font-medium">have an account?<Link to='/register'>Register</Link></p>
-        <button onClick={handleGoogleLogin} className="btn btn-primary">gogole login</button>
+        <p className=" m-auto font-medium">have an account?<Link to='/login'>Login</Link></p>
     </div>
   </div>
 </div>
@@ -82,4 +70,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;

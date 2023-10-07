@@ -1,13 +1,27 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const Navber = () => {
+  const {user , LogOut}=useContext(AuthContext)
+ 
     const navLink=<>
       <li> <NavLink to='/'>Home</NavLink></li>
       <li> <NavLink to='/OurServices'>Our_SerVices</NavLink></li>
       <li> <NavLink to='/contact'>Contact_Us</NavLink></li>
     </>
+    const hanadleLogOut=()=>{
+      LogOut()
+      .then(result =>{
+        console.log(result);
+      })
+      .catch(error =>{
+        console.error(error);
+      })
+    }
     return (
+      
         <div className="navbar font-poppin w-3/4 mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
@@ -26,8 +40,18 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  
-<Link to='/login'><button className="btn btn-ghost">Login</button></Link>
+    {
+      user && <><span>{user.email} </span> <span>{}</span></>
+    }
+    {
+      user ? <button className="btn btn-ghost" onClick={hanadleLogOut} >Log Out</button> 
+      :
+      <Link to='/login'>
+  <button className="btn btn-ghost">Login</button>
+  </Link>
+    }
+
+<Link to='/register'><button className="btn btn-ghost">Register</button></Link>
   </div>
 </div>
     );

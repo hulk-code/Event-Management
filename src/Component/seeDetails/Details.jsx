@@ -20,7 +20,7 @@ const Details = () => {
             <div className="flex w-1/2 gap-7 m-auto">
              
               <div className="relative ">
-                <img className="w-[400px] h-[300px] rounded-full" src={card.image1} alt="" />
+                <img className="w-[450px] h-[300px] rounded-full" src={card.image1} alt="" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white text-lg font-bold">Click To Booked</p>
                 </div>
@@ -28,7 +28,7 @@ const Details = () => {
       
           
               <div className="relative">
-                <img className="w-[400px] h-[300px] rounded-full" src={card.image2} alt="" />
+                <img className="w-[450px] h-[300px] rounded-full" src={card.image2} alt="" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white text-lg font-bold">Click To Booked</p>
                 </div>

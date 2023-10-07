@@ -6,6 +6,8 @@ import ContactUs from "../ContactUS/ContactUs";
 import OurService from "../OurService/OurService";
 import Login from "../Login/Login";
 import Details from "../seeDetails/Details";
+import Register from "../Register/Register";
+import PrivetRoute from "../PrivetRoute/PrivetRoute";
 
   
 
@@ -32,8 +34,12 @@ import Details from "../seeDetails/Details";
               element: <Login></Login>,
             },
             {
+              path: "/register",
+              element: <Register></Register>,
+            },
+            {
               path: "/details/:id",
-              element: <Details></Details>,
+              element:<PrivetRoute><Details></Details></PrivetRoute>,
                loader: () =>fetch('/data.json')
             },
           ]

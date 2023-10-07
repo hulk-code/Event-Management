@@ -25,7 +25,7 @@ const Services = () => {
                                         <h2 className="card-title">{card.name}</h2>
                                         <p>{card.price}</p>
                                         <div className="card-actions justify-end">
-                                        <Link to={`/details/${card.id}`}><button className="btn btn-outline btn-warning">Warning</button></Link>
+                                        <Link to={`/details/${card.id}`}><button className="btn btn-outline btn-warning">See_Details</button></Link>
                                         </div>
                                     </div>
                                 </div>
