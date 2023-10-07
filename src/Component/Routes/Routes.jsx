@@ -8,6 +8,8 @@ import Login from "../Login/Login";
 import Details from "../seeDetails/Details";
 import Register from "../Register/Register";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
+import Rental from "../EventEquipment/Rental";
+import OfferSevices from "../Eventservices/OfferSevices";
 
   
 
@@ -36,6 +38,14 @@ import PrivetRoute from "../PrivetRoute/PrivetRoute";
             {
               path: "/register",
               element: <Register></Register>,
+            },
+            {
+              path: "/eventEquipment",
+              element: <PrivetRoute><Rental></Rental></PrivetRoute>,
+            },
+            {
+              path: "/eventcategory",
+              element: <PrivetRoute><OfferSevices></OfferSevices></PrivetRoute>,
             },
             {
               path: "/details/:id",

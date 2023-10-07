@@ -10,6 +10,8 @@ const Navber = () => {
       <li> <NavLink to='/'>Home</NavLink></li>
       <li> <NavLink to='/OurServices'>Our_SerVices</NavLink></li>
       <li> <NavLink to='/contact'>Contact_Us</NavLink></li>
+      <li> <NavLink to='/eventEquipment'>Equipment Rental</NavLink></li>
+      <li> <NavLink to='/eventcategory'>Offer Category</NavLink></li>
     </>
     const hanadleLogOut=()=>{
       LogOut()
@@ -40,9 +42,10 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    {
-      user && <><span>{user.email} </span> <span>{}</span></>
-    }
+    {/* {
+      user && <><span>{user.email} </span> <span>{}</span></> 
+      } */}
+    
     {
       user ? <button className="btn btn-ghost" onClick={hanadleLogOut} >Log Out</button> 
       :
