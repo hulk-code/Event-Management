@@ -18,7 +18,7 @@ const RecentEvent = () => {
      data-aos-duration="2000">
                 <div className="card w-[300px] shadow-xl">
                     <figure className="px-10 pt-10">
-                        <img src="/src/assets/w1.jpg" alt="Shoes" className="rounded-xl" />
+                        <img src="https://i.ibb.co/RydW2sk/w1.jpg" alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">weadding Program</h2>
@@ -28,7 +28,7 @@ const RecentEvent = () => {
                 </div>
                 <div className="card w-[300px]  shadow-xl">
                     <figure className="px-10 pt-10">
-                        <img src="/src/assets/w-2.jpg" alt="Shoes" className="rounded-xl" />
+                        <img src="https://i.ibb.co/LrnvJ4d/w-2.jpg" alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">weadding Program</h2>
@@ -38,7 +38,7 @@ const RecentEvent = () => {
                 </div>
                 <div className="card w-[300px] shadow-xl">
                     <figure className="px-10 pt-10">
-                        <img src="/src/assets/w-3.jpg" alt="Shoes" className="rounded-xl" />
+                        <img src="https://i.ibb.co/fvRwMmP/w-3.jpg" alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">BIRTH DAY EVENT</h2>
@@ -48,7 +48,7 @@ const RecentEvent = () => {
                 </div>
                 <div className="card w-[300px] shadow-xl">
                     <figure className="px-10 pt-10">
-                        <img src="/src/assets/w-4.jpg" alt="Shoes" className="rounded-xl" />
+                        <img src="https://i.ibb.co/k6hFJfh/w-4.jpg" alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">Program STAGE</h2>

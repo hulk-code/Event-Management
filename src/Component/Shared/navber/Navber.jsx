@@ -4,6 +4,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const Navber = () => {
+  
   const {user , LogOut}=useContext(AuthContext)
   console.log(user);
  
@@ -35,7 +36,7 @@ const Navber = () => {
        {navLink}
       </ul>
     </div>
-    <img  className="h-20 hidden lg:block " src="/src/assets/logo2.png" alt="" />
+    <img  className="h-20 hidden lg:block " src="https://i.ibb.co/kSwC4G3/logo2.png" alt="" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 text-lg">
@@ -43,9 +44,14 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    {/* {
-      user && <><span>{user.email} </span> <span>{}</span></> 
-      } */}
+    <div className="flex items-center">
+    {
+      user?.displayName
+     }
+       {
+        user && <img className="w-5 h-5" src={user?.photoURL} alt="" />
+       }
+    </div>
     
     {
       user ? <button className="btn btn-ghost" onClick={hanadleLogOut} >Log Out</button> 

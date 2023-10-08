@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext)
+  const { createUser, updateUserProfile } = useContext(AuthContext)
   const [error, setError] = useState('');
   const [success, setSuccess] = useState("")
 
@@ -17,9 +17,11 @@ const Register = () => {
     e.preventDefault();
     console.log(e.currentTarget);
     const form = new FormData(e.currentTarget)
-
+    const displayName=form.get('displayName')
+    const photoURL=form.get('photoURL')
     const password = form.get('password')
     const email = form.get('email')
+    console.log(displayName ,email,password);
 
     if (!/(?=.*[A-Z])/.test(password)) {
       setError('Please add at least two uppercase.');
@@ -38,6 +40,7 @@ const Register = () => {
         console.log(result.user);
         if (!result.user.emailVerified) {
           setSuccess('User login successful.');
+
           Swal.fire({
             
             icon: 'success',
@@ -45,9 +48,16 @@ const Register = () => {
             showConfirmButton: false,
             timer: 1500
           })
+          updateUserProfile(displayName ,photoURL)
+          .then( () =>
+          console.log('profilee updte'))
+          .catch(error =>{
+            console.error(error);
+          })
+          
           setError('');
         }
-            form.reset();
+           
       })
       .catch(error => {
         console.error(error);
@@ -69,6 +79,12 @@ const Register = () => {
                   <span className="label-text">Name</span>
                 </label>
                 <input type="text" name="displayName" placeholder="email" className="input input-bordered" required />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo URL</span>
+                </label>
+                <input type="url" name="photoURL" placeholder="Photo URL" className="input input-bordered" />
               </div>
 
               <div className="form-control">

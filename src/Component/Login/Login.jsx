@@ -13,6 +13,7 @@ const Login = () => {
     const provider=new GoogleAuthProvider();
     const [error,setError] = useState('')
     
+    
     const location=useLocation();
     const nevigate=useNavigate()
 
@@ -40,10 +41,13 @@ const Login = () => {
       }); 
     })
   }
+
      const handleGoogleLogin =()=>{
               signInWithPopup(auth,provider)
               .then(result =>{
                 console.log(result.user);
+                
+                
               })
               .catch(error =>{
                 console.error(error);
@@ -52,6 +56,7 @@ const Login = () => {
 
     return (
         <div>
+        
           <Navber></Navber>
             <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col ">
@@ -86,6 +91,11 @@ const Login = () => {
         <button onClick={handleGoogleLogin} className="btn "><BiLogoGoogle className="text-2xl"></BiLogoGoogle></button>
     </div>
       <p className='text-red-500'> {error}</p>
+      <div>
+        
+      </div>
+      
+     
   </div>
 </div>
         </div>
