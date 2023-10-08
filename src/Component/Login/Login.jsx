@@ -6,9 +6,17 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { BiLogoGoogle } from "react-icons/bi";
 import Swal from "sweetalert2";
+import 'aos/dist/aos.css'; 
+import AOS from 'aos';
+import { useEffect } from "react";
 
 
 const Login = () => {
+  useEffect(() => {
+    AOS.init({
+        duration: 1000, 
+      });
+  }, []);
     const {logIn }=useContext(AuthContext)
     const provider=new GoogleAuthProvider();
     const [error,setError] = useState('')
@@ -58,7 +66,7 @@ const Login = () => {
         <div>
         
           <Navber></Navber>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200" data-aos="fade-down">
   <div className="hero-content flex-col ">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Login Here!</h1>

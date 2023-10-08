@@ -1,12 +1,20 @@
 import Navber from "../Shared/navber/Navber";
-
+import 'aos/dist/aos.css'; 
+import AOS from 'aos';
+import { useEffect } from "react";
 
 const Rental = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, 
+          });
+      }, []);
     return (
+       
                        
        <div>
            <Navber></Navber>
-         <div className="font-poppin w-3/4 mx-auto mb-5 ">
+         <div className="font-poppin w-3/4 mx-auto mb-5 " data-aos="zoom-in">
             <h1 className="text-5xl font-bold text-center lg:mb-10 lg:mt-10 " >Our Equipment</h1>
             <p>
                 <ol>

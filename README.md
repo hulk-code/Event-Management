@@ -1,8 +1,7 @@
-# React + Vite
+Featured of my project:-
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- create login and register page,register page have password authentication ,ans also have google sign in option
+- dynamically set User information(name,photo) show on the top of the navber after login
+- dynamically created services card include a details button and details button is a private route only seen when user logged in
+- create 2 private route that only be seen when user logged in
+- add AOS animation

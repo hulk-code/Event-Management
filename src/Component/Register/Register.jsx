@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Navber from "../Shared/navber/Navber";
 import Swal from "sweetalert2";
-
+import 'aos/dist/aos.css'; 
+import AOS from 'aos';
+import { useEffect } from "react";
 
 
 
@@ -11,6 +13,11 @@ const Register = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext)
   const [error, setError] = useState('');
   const [success, setSuccess] = useState("")
+  useEffect(() => {
+    AOS.init({
+        duration: 1000, 
+      });
+  }, []);
 
 
   const handleRegister = e => {
@@ -66,7 +73,7 @@ const Register = () => {
   return (
     <div>
       <Navber></Navber>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen bg-base-200" data-aos="fade-up">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Register Here!</h1>

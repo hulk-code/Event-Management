@@ -1,11 +1,18 @@
 import Navber from "../Shared/navber/Navber";
-
+import 'aos/dist/aos.css'; 
+import AOS from 'aos';
+import { useEffect } from "react";
 
 const OfferSevices = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, 
+          });
+      }, []);
     return (
         <div>
             <Navber></Navber>
-            <div className="mx-auto">
+            <div className="mx-auto" data-aos="zoom-out-up">
                 <p className="text-5xl font-bold text-center lg:mb-10 lg:mt-10 p-5">What We Offering
                 </p>
                 <div className="w-3/4 mx-auto">

@@ -1,12 +1,22 @@
 import Navber from "../Shared/navber/Navber";
 
-
+import 'aos/dist/aos.css'; 
+import AOS from 'aos';
+import { useEffect } from "react";
 
 const About = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, 
+          });
+      }, []);
     return (
         <div>
             <Navber></Navber>
-            <div className="font-poppin ">
+            <div className="font-poppin " data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"
+     >
             <h1 className="text-2xl font-bold mt-5 mb-5 ml-5">ABOUT</h1>
             <p className="bg-slate-100 lg:p-14 mb-5">With a perfect blend of experience and passion, MINI Event Planner is an event management company in Bangladesh. We’ve emerged as a company with ideas to turn your corporate or personal event into something worth remembering. With the help of our creative team, we provide our services to most types of corporate events including, but not limited to, seminars, conferences, trade shows, cultural events, company or organization milestones, exhibitions, product launches, concerts, company annual meetings, corporate picnics, fashion shows and appreciation events. We will also strive to make your wedding events, birthday events and other personal events unforgettable.
                 <br />
