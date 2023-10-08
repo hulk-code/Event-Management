@@ -10,10 +10,10 @@ const RecentEvent = () => {
           });
       }, []);
     return (
-        <div className="mt-16 mb-16 font-poppin bg-slate-300">
-          <h1 className=" text-center text-4xl font-semibold ">Our Recent Program</h1>
-            <div className="lg:flex items-center justify-evenly lg:gap-32 mt-5">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5" data-aos="flip-left"
+        <div className="mt-16 mb-16 font-poppin lg:bg-slate-300 lg:w-full w-[200px] mx-auto">
+          <h1 className=" text-center text-4xl font-semibold pt-5 lg:pt-14">Our Recent Program</h1>
+            <div className="lg:flex lg:items-center justify-evenly lg:gap-32 mt-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:pb-6 lg:pl-8" data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000">
                 <div className="card w-[300px] shadow-xl">
@@ -59,8 +59,8 @@ const RecentEvent = () => {
                 </div>
                
             </div>
-            <div data-aos="zoom-out-left">
-                <h1 className="font-bold text-4xl ">Trust Us</h1>
+            <div data-aos="zoom-out-left" className="mx-auto">
+                <h1 className="font-bold text-4xl  ">Trust Us</h1>
                 <p>We Make Your program Better</p>
                 <p>Your Happiness Our Achivement</p>
                <p className="font-bold">Contact-Us <button className="btn btn-accent"><BiPhoneCall></BiPhoneCall>01999999999</button></p>

@@ -24,7 +24,7 @@ const Register = () => {
     console.log(displayName ,email,password);
 
     if (!/(?=.*[A-Z])/.test(password)) {
-      setError('Please add at least two uppercase.');
+      setError('Please add at least one uppercase.');
       return
     }
     else if (!/(?=.*[!@#$&*])/.test(password)) {

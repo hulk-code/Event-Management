@@ -5,7 +5,7 @@ const Footer = () => {
         <div>
             <footer className="footer p-10 bg-base-200 text-base-content">
   <aside>
-   <img src="/src/assets/logo2.png" alt="" />
+   <img src="https://i.ibb.co/kSwC4G3/logo2.png" alt="" />
    
   </aside> 
   <nav>
