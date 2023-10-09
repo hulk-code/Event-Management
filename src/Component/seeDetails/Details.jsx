@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import Navber from "../Shared/navber/Navber";
+import Footer from "../Shared/Footer/Footer";
+
 
 
 const Details = () => {
@@ -10,7 +11,7 @@ const Details = () => {
     return (
         
         <div className="bg-gray-300">
-        <Navber></Navber>
+       
         <div className="font-poppin w-3/4 mx-auto bg-white">
           <h1 className="text-5xl font-bold p-5 lg:p-16 text-center">{card.name}</h1>
           <img className="mx-auto border rounded-md" src={card.image} alt="" />
@@ -39,6 +40,7 @@ const Details = () => {
             </div>
           </div>
         </div>
+        <Footer></Footer>
       </div>
       
     );
