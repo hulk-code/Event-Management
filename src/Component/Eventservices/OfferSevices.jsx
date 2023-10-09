@@ -1,7 +1,8 @@
-import Navber from "../Shared/navber/Navber";
+
 import 'aos/dist/aos.css'; 
 import AOS from 'aos';
 import { useEffect } from "react";
+import Footer from "../Shared/Footer/Footer";
 
 const OfferSevices = () => {
     useEffect(() => {
@@ -11,7 +12,7 @@ const OfferSevices = () => {
       }, []);
     return (
         <div>
-            <Navber></Navber>
+            
             <div className="mx-auto" data-aos="zoom-out-up">
                 <p className="text-5xl font-bold text-center lg:mb-10 lg:mt-10 p-5">What We Offering
                 </p>
@@ -39,6 +40,7 @@ const OfferSevices = () => {
                 </div>
 
             </div>
+            <Footer></Footer>
         </div>
     );
 };

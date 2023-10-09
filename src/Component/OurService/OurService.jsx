@@ -1,12 +1,15 @@
 import Services from "../Services/Services";
-import Navber from "../Shared/navber/Navber";
+import Footer from "../Shared/Footer/Footer";
+
 
 
 const OurService = () => {
     return (
         <div>
-            <Navber></Navber>
+           
             <Services></Services>
+            <Footer></Footer>
+        
         </div>
     );
 };

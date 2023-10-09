@@ -1,7 +1,8 @@
-import Navber from "../Shared/navber/Navber";
+
 import 'aos/dist/aos.css'; 
 import AOS from 'aos';
 import { useEffect } from "react";
+import Footer from "../Shared/Footer/Footer";
 
 const Rental = () => {
     useEffect(() => {
@@ -13,7 +14,7 @@ const Rental = () => {
        
                        
        <div>
-           <Navber></Navber>
+          
          <div className="font-poppin w-3/4 mx-auto mb-5 " data-aos="zoom-in">
             <h1 className="text-5xl font-bold text-center lg:mb-10 lg:mt-10 " >Our Equipment</h1>
             <p>
@@ -42,6 +43,7 @@ const Rental = () => {
                 
             </p>
         </div>
+        <Footer></Footer>
        </div>
     );
 };

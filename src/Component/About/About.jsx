@@ -1,8 +1,9 @@
-import Navber from "../Shared/navber/Navber";
+
 
 import 'aos/dist/aos.css'; 
 import AOS from 'aos';
 import { useEffect } from "react";
+import Footer from "../Shared/Footer/Footer";
 
 const About = () => {
     useEffect(() => {
@@ -12,7 +13,7 @@ const About = () => {
       }, []);
     return (
         <div>
-            <Navber></Navber>
+            
             <div className="font-poppin " data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine"
@@ -29,6 +30,7 @@ const About = () => {
             <p >Email Us:minievent@gmail.com</p>
             <p >Facebook: https://www.facebook.com/mini.Events.Planner</p>
            </div>
+           <Footer></Footer>
         </div>
         </div>
     );

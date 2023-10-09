@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import Navber from "../Shared/navber/Navber";
+
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
@@ -65,7 +65,7 @@ const Login = () => {
     return (
         <div>
         
-          <Navber></Navber>
+         
             <div className="hero min-h-screen bg-base-200" data-aos="fade-down">
   <div className="hero-content flex-col ">
     <div className="text-center lg:text-left">
