@@ -97,7 +97,7 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
-                <input type="text" name="displayName" placeholder="email" className="input input-bordered" required />
+                <input type="text" name="displayName" placeholder="Name" className="input input-bordered" required />
               </div>
               <div className="form-control">
                 <label className="label">
@@ -126,7 +126,7 @@ const Register = () => {
                 <button className="btn btn-primary">Register</button>
               </div>
             </form>
-            <p className=" m-auto font-medium">have an account?<Link to='/login'>Login</Link></p>
+            <p className=" m-auto font-medium p-3">have an account?<Link to='/login' className="text-red-800">Login</Link></p>
             
             <p className='text-green-500 mx-auto'>{success}</p>
           </div>

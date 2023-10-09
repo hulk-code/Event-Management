@@ -69,7 +69,7 @@ const Login = () => {
             <div className="hero min-h-screen bg-base-200" data-aos="fade-down">
   <div className="hero-content flex-col ">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Login Here!</h1>
+      <h1 className="text-5xl font-bold text-gre">Login Here!</h1>
      
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -95,8 +95,9 @@ const Login = () => {
           <button className="btn btn-primary">Login</button>
         </div>
       </form>
-        <p className=" m-auto font-medium">have an account?<Link to='/register' className="text-lime-700">Register</Link></p>
+        
         <button onClick={handleGoogleLogin} className="btn "><BiLogoGoogle className="text-2xl"></BiLogoGoogle></button>
+        <p className=" m-auto font-medium p-3">New Here? PLZ<Link to='/register' className="text-red-700">Register</Link></p>
     </div>
       <p className='text-red-500'> {error}</p>
       <div>

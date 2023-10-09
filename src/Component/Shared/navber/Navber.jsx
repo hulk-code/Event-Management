@@ -44,13 +44,13 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <div className="flex items-center">
+    <div className="flex items-center lg:mr-2">
     {
       user?.displayName
      }
        {
         user && <div className="avatar">
-        <div className="w-10 lg:mr-2 lg:ml-2 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+        <div className="w-10 lg:mr-3 lg:ml-3 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
           <img  src={user?.photoURL} alt="" />
         </div>
       </div>
