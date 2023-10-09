@@ -6,3 +6,4 @@ Featured of my project:-
 - create 2 private route that only be seen when user logged in
 - add AOS animation
 
+- Live Link:https://social-event-management-bdc18.web.app
