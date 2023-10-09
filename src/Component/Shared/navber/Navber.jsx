@@ -26,7 +26,7 @@ const Navber = () => {
     }
     return (
       
-        <div className="navbar font-poppin lg:w-3/4 mx-auto">
+        <div className="navbar font-poppin w-full mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
