@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Navber from "../Shared/navber/Navber";
 import Swal from "sweetalert2";
@@ -11,8 +11,11 @@ import { useEffect } from "react";
 
 const Register = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext)
+  
   const [error, setError] = useState('');
   const [success, setSuccess] = useState("")
+  const location=useLocation();
+    const nevigate=useNavigate();
   useEffect(() => {
     AOS.init({
         duration: 1000, 
@@ -45,6 +48,19 @@ const Register = () => {
     createUser(email, password)
       .then(result => {
         console.log(result.user);
+        
+        
+        updateUserProfile(displayName ,photoURL)
+        .then( () =>{
+          console.log('profilee updte')
+          nevigate(location ?.state ?location.state : '/')
+        }
+        
+        )
+        .catch(error =>{
+          console.error(error);
+        })
+
         if (!result.user.emailVerified) {
           setSuccess('User login successful.');
 
@@ -55,12 +71,8 @@ const Register = () => {
             showConfirmButton: false,
             timer: 1500
           })
-          updateUserProfile(displayName ,photoURL)
-          .then( () =>
-          console.log('profilee updte'))
-          .catch(error =>{
-            console.error(error);
-          })
+         
+         
           
           setError('');
         }

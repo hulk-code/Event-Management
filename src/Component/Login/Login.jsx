@@ -23,7 +23,7 @@ const Login = () => {
     
     
     const location=useLocation();
-    const nevigate=useNavigate()
+    const nevigate=useNavigate();
 
   const handlLogin= e =>{
     e.preventDefault();
@@ -54,7 +54,7 @@ const Login = () => {
               signInWithPopup(auth,provider)
               .then(result =>{
                 console.log(result.user);
-                
+                nevigate(location ?.state ?location.state : '/')
                 
               })
               .catch(error =>{
